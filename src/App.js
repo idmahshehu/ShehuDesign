@@ -7,8 +7,9 @@ import Testimonials from "./components/Testimonals";
 // import Scrollbar from "smooth-scrollbar";
 import LocomotiveScroll from "locomotive-scroll";
 import "locomotive-scroll/src/locomotive-scroll.scss"; // Import the styles for LocomotiveScroll
-import ClientList from "./components/ClientList";
 import Earth from "./components/Earth";
+import Sidebar from "./components/Sidebar";
+import Video from "./components/Video";
 
 function App() {
   const scrollRef = useRef(null);
@@ -36,11 +37,12 @@ function App() {
     <>
       {/* <div id="my-scrollbar" style={{ height: '100vh', overflow: 'hidden' }}> */}
       <div id="main-container">
-        <Earth/>
+        <Sidebar/>
+        <Video/>
         <HomePage />
         <WhatIDo />
+        <Earth/>
         <Testimonials />
-        {/* <ClientList/> */}
       </div>
 
       {/* </div> */}

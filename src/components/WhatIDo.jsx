@@ -16,19 +16,28 @@ function WhatIDo() {
     <>
       {[...Array(2)].map((_, index) => (
         <div
-          className={`heading-mask js-heading-mask ${hoverIndex === index ? 'hover' : ''}`}
+          className={`heading-mask js-heading-mask ${
+            hoverIndex === index ? "hover" : ""
+          }`}
           key={index}
-          onMouseEnter={() => handleMouseEnter(index)}
-          onMouseLeave={handleMouseLeave}
         >
           <div className="heading-mask_el heading-mask_el__deep container_content">
             <div className="row align-items-center">
               <div className="col-sm-6 offset-lg-2 offset-sm-1 col-12">
                 <div className="simple-masking d-flex align-items-center">
                   <div className="simple-masking_el">
-                    <h2 className="h1 mb-0 js-heading-mask_heading is-masking" style={{ "--size": "0%" }}>3D</h2>
+                    <h2
+                      className="h1 mb-0 js-heading-mask_heading is-masking"
+                      style={{ "--size": "0%" }}
+                      onMouseEnter={() => handleMouseEnter(index)}
+                      onMouseLeave={handleMouseLeave}
+                    >
+                      3D
+                    </h2>
                   </div>
-                  <p className="mb-0 desc">I can produce anything that my 16” laptop can render</p>
+                  <p className="mb-0 desc">
+                    I can produce anything that my 16” laptop can render
+                  </p>
                 </div>
               </div>
             </div>

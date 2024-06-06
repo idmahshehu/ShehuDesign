@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import 'animate.css';
 
 const HomePage = () => {
   useEffect(() => {
@@ -41,24 +42,24 @@ const HomePage = () => {
       <div
         className="circle"
         id="circle1"
-        data-start-x="400"
-        data-start-y="300"
+        data-start-x="100"
+        data-start-y="500"
       ></div>
       <div
         className="circle"
         id="circle2"
-        data-start-x="600"
+        data-start-x="1000"
         data-start-y="500"
       ></div>
       <div
         className="circle"
         id="circle3"
-        data-start-x="800"
-        data-start-y="700"
+        data-start-x="600"
+        data-start-y="600"
       ></div>
-      <div className="content">
-        <h1>Art Gallery App</h1>
-        <p>
+      <div className="content hidden">
+        <h1 className="animate__animated animate__backInUp">Art Gallery App</h1>
+        <p className="animate__animated animate__backInUp">
           Welcome to our art gallery. Explore our collection of beautiful
           artworks.
         </p>
