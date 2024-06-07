@@ -245,7 +245,6 @@ function Testimonials() {
       ref={testimonialsRef}
       className="testimonials js-testimonials"
       style={{ "--index": index, height: "100%" }}
-    //   data-scroll-section
     >
       <div className="row justify-content-center" data-scroll>
         <div className="col-lg-8 col-sm-10 col-12">

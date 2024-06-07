@@ -119,6 +119,9 @@ const Earth = React.memo(() => {
     renderer.setSize(mount.clientWidth, mount.clientHeight);
     mount.appendChild(renderer.domElement);
 
+    // Set a solid color background
+    scene.background = new THREE.Color("#0d0d0d");
+
     // Create a sphere geometry and a basic material with an Earth texture
     const geometry = new THREE.SphereGeometry(1, 32, 32);
     const texture = new THREE.TextureLoader().load(
@@ -148,8 +151,6 @@ const Earth = React.memo(() => {
       mount.removeChild(renderer.domElement);
     };
   }, []);
-  
-
 
   const handleMouseEnter = useCallback((index) => {
     setHoverIndex(index);
@@ -160,11 +161,17 @@ const Earth = React.memo(() => {
   }, []);
 
   return (
-    <div className="background_earth" ref={mountRef} style={{ width: "100%", height: "80vh" }}>
+    <div
+      className="background_earth"
+      ref={mountRef}
+      style={{ width: "100%", height: "80vh" }}
+    >
       <div className="content_earth hidden">
-        {[...Array(2)].map((_, index) => (
+        {[...Array(4)].map((_, index) => (
           <div
-            className={`heading-mask js-heading-mask ${hoverIndex === index ? 'hover' : ''}`}
+            className={`heading-mask js-heading-mask ${
+              hoverIndex === index ? "hover" : ""
+            }`}
             key={index}
             style={{ width: "100%" }}
           >
@@ -173,7 +180,7 @@ const Earth = React.memo(() => {
                 <div className="col-sm-6 offset-lg-2 offset-sm-1 col-12">
                   <div className="simple-masking d-flex align-items-center">
                     <div className="simple-masking_el">
-                    <h2 
+                      <h2
                         className="h1 mb-0 js-heading-mask_heading is-masking"
                         style={{ "--size": "0%" }}
                         onMouseEnter={() => handleMouseEnter(index)}
@@ -182,7 +189,9 @@ const Earth = React.memo(() => {
                         3D
                       </h2>
                     </div>
-                    <p className="mb-0 desc">I can produce anything that my 16” laptop can render</p>
+                    <p className="mb-0 desc">
+                      I can produce anything that my 16” laptop can render
+                    </p>
                   </div>
                 </div>
               </div>

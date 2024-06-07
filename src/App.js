@@ -1,5 +1,5 @@
 // App.js
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./App.css";
 import HomePage from "./components/HomePage";
 import WhatIDo from "./components/WhatIDo";
@@ -10,13 +10,16 @@ import "locomotive-scroll/src/locomotive-scroll.scss"; // Import the styles for 
 import Earth from "./components/Earth";
 import Sidebar from "./components/Sidebar";
 import Video from "./components/Video";
+import AboutMe from "./components/AboutMe";
+import History from "./components/History";
+import Clients from "./components/Clients";
+import Motto from "./components/Motto";
+// import PixiCursor from "./components/PixiCursor";
+import Cursor from "./components/cursor";
+import cursorPixi from "./components/cursorPixi";
+import Footer from "./components/Footer";
 
 function App() {
-  const scrollRef = useRef(null);
-
-  useEffect(() => {
-
-    },[]);
 
   // useEffect(() => {
   //   const scrollbar = Scrollbar.init(document.querySelector('#my-scrollbar'), {
@@ -33,17 +36,28 @@ function App() {
   //   };
   // }, []);
 
+
   return (
     <>
       {/* <div id="my-scrollbar" style={{ height: '100vh', overflow: 'hidden' }}> */}
+      
       <div id="main-container">
+        {/* <Cursor/> */}
+      <Cursor/>
         <Sidebar/>
         <Video/>
-        <HomePage />
+        <AboutMe/>
         <WhatIDo />
+        <HomePage />
+        <History/>
+        <Clients/>
         <Earth/>
         <Testimonials />
+        <Motto/>
+        <Footer/>
+        {/* </div> */}
       </div>
+
 
       {/* </div> */}
     </>

@@ -2,7 +2,7 @@ import React from "react";
 
 const Video = () => {
   return (
-    <div className="background">
+    <div className="background" id="video">
       <video autoPlay loop muted playsInline className="video">
         <source
           src={require("../assets/Untitled video - Made with Clipchamp.mp4")}
@@ -10,7 +10,7 @@ const Video = () => {
         />
         Your browser does not support the video tag.
       </video>
-      <div className="content hidden">
+      <div className="content hidden" id="video_content">
         <p className="animate__animated animate__backInUp">Making</p>
         <h1 className=" animate__animated animate__fadeInUp">
           {" "}

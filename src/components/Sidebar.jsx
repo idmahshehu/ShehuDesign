@@ -20,8 +20,8 @@ const Sidebar = () => {
 
   const handleMouseMove = (e, id) => {
     const iconRect = e.target.getBoundingClientRect();
-    const offsetX = (e.clientX - (iconRect.left + iconRect.width / 2)) / 10; // Adjusting for smoother movement
-    const offsetY = (e.clientY - (iconRect.top + iconRect.height / 2)) / 10;
+    const offsetX = (e.clientX - (iconRect.left + iconRect.width / 2)) / 5; 
+    const offsetY = (e.clientY - (iconRect.top + iconRect.height / 2)) / 5;
     setPositions((prev) => ({ ...prev, [id]: { x: offsetX, y: offsetY } }));
   };
 
@@ -52,6 +52,7 @@ const Sidebar = () => {
             onMouseLeave={() => handleMouseLeave("dribbble")}
             style={{
               transform: `translate(${positions.dribbble?.x}px, ${positions.dribbble?.y}px)`,
+              transition: "transform 0.2s ease",
             }}
           >
             <a href="https://dribbble.com/phamduyminh">
@@ -64,6 +65,7 @@ const Sidebar = () => {
             onMouseLeave={() => handleMouseLeave("instagram")}
             style={{
               transform: `translate(${positions.instagram?.x}px, ${positions.instagram?.y}px)`,
+              transition: "transform 0.2s ease",
             }}
           >
             <a href="https://www.instagram.com/minhpham.design">
@@ -76,6 +78,7 @@ const Sidebar = () => {
             onMouseLeave={() => handleMouseLeave("youtube")}
             style={{
               transform: `translate(${positions.youtube?.x}px, ${positions.youtube?.y}px)`,
+              transition: "transform 0.2s ease",
             }}
           >
             <a href="https://www.youtube.com/@MinhPhamDesign">
@@ -88,6 +91,7 @@ const Sidebar = () => {
             onMouseLeave={() => handleMouseLeave("linkedin")}
             style={{
               transform: `translate(${positions.linkedin?.x}px, ${positions.linkedin?.y}px)`,
+              transition: "transform 0.2s ease",
             }}
           >
             <a href="https://www.linkedin.com/in/minh-pham-9b67ba52/">
