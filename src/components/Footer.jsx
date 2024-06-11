@@ -11,12 +11,12 @@ const Footer = () => {
     };
 
     const headings = [
-        { id: 0, main: "Dribbble" , text: "design"},
-        { id: 1, main: "Youtube", text: "design" },
-        { id: 2, main: "LinkedIn", text: "design" },
-        { id: 3, main: "Instagram", text: "design" },
-        { id: 4, main: "Facebook", text: "design" },
-        { id: 5, main: "Behance", text: "design" }
+        { id: 0, main: "Dribbble" , text: "Dribbble"},
+        { id: 1, main: "Youtube", text: "Youtube" },
+        { id: 2, main: "LinkedIn", text: "LinkedIn" },
+        { id: 3, main: "Instagram", text: "Instagram" },
+        { id: 4, main: "Facebook", text: "Facebook" },
+        { id: 5, main: "Behance", text: "Behance" }
       ];
   
     const handleMouseLeave = () => {
@@ -79,6 +79,12 @@ const Footer = () => {
             <p>+383 45 851 731</p>
         </div>
     </div>
+    <div id="controls">
+  <label for="commentsSwitch">Toggle Comments</label>
+  <input type="checkbox" id="commentsSwitch"/>
+</div>
+<div id="canvasCont2"></div>
+
   </div>
   )
 }

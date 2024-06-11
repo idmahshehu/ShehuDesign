@@ -14,52 +14,28 @@ import AboutMe from "./components/AboutMe";
 import History from "./components/History";
 import Clients from "./components/Clients";
 import Motto from "./components/Motto";
-// import PixiCursor from "./components/PixiCursor";
 import Cursor from "./components/cursor";
-import cursorPixi from "./components/cursorPixi";
 import Footer from "./components/Footer";
+import SwitchImg from './components/SwitchImg.jsx';
 
 function App() {
-
-  // useEffect(() => {
-  //   const scrollbar = Scrollbar.init(document.querySelector('#my-scrollbar'), {
-  //     damping: 0.06,
-  //     thumbMinSize: 20,
-  //     renderByPixels: true,
-  //     alwaysShowTracks: true,
-  //   });
-
-  //   return () => {
-  //     if (scrollbar) {
-  //       scrollbar.destroy();
-  //     }
-  //   };
-  // }, []);
-
-
   return (
     <>
-      {/* <div id="my-scrollbar" style={{ height: '100vh', overflow: 'hidden' }}> */}
-      
       <div id="main-container">
-        {/* <Cursor/> */}
-      <Cursor/>
-        <Sidebar/>
-        <Video/>
-        <AboutMe/>
+        <Cursor />
+        <Sidebar />
+        <Video />
+        <AboutMe />
         <WhatIDo />
         <HomePage />
-        <History/>
-        <Clients/>
-        <Earth/>
+        <SwitchImg />
+        <History />
+        <Clients />
+        <Earth />
         <Testimonials />
-        <Motto/>
-        <Footer/>
-        {/* </div> */}
+        <Motto />
+        <Footer />
       </div>
-
-
-      {/* </div> */}
     </>
   );
 }

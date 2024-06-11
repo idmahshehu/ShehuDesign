@@ -6,7 +6,7 @@ export default async function cursorPixi() {
   const app = new Application();
 
   // Initialize the application
-  await app.init({ resizeTo: window, backgroundAlpha: 0 });
+  await app.init({ resizeTo: window, backgroundAlpha: 0 }); 
 
   const container = document.getElementById("pixi");
   if (!container) {
@@ -85,7 +85,7 @@ export default async function cursorPixi() {
       container.style.zIndex = "5";
       app.renderer.backgroundAlpha = 1;
       app.renderer.backgroundColor = 0xff0000; 
-      aboutMeElement.style.color = "black";
+      aboutMeElement.style.color = "white";
     });
   
     aboutMeElement.addEventListener("mouseout", () => {

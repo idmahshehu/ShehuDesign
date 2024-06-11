@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import 'animate.css';
+import "animate.css";
 
 const HomePage = () => {
   useEffect(() => {
@@ -18,8 +18,8 @@ const HomePage = () => {
         const startY = parseFloat(circle.getAttribute("data-start-y"));
 
         // Calculate the positions interpolated between start and target positions
-        const xPos = startX + (targetX - startX) * (scrollY / windowHeight) ;
-        const yPos = startY + (targetY - startY) * (scrollY / windowHeight) ;
+        const xPos = startX + (targetX - startX) * (scrollY / windowHeight);
+        const yPos = startY + (targetY - startY) * (scrollY / windowHeight);
 
         circle.style.transform = `translate(${xPos - startX}px, ${
           yPos - startY
@@ -38,7 +38,7 @@ const HomePage = () => {
   }, []);
 
   return (
-    <div className="background">
+    <div className="background" id="work">
       <div
         className="circle"
         id="circle1"
@@ -65,21 +65,19 @@ const HomePage = () => {
         </p>
       </div> */}
       <div className="aboutme_container">
-      <div className="row justify-content-center">
-        <div className="col-lg-8 col-sm-10 col-12">
-          <p className=" container_content body-text text-uppercase">
-            WHAT THEY SAID
-          </p>
+        <div className="row justify-content-center">
+          <div className="col-lg-8 col-sm-10 col-12">
+            <p className=" container_content body-text text-uppercase">
+            <strong style={{ color: "#eb5939" }}>Shehu Design </strong>
+            </p>
+          </div>
+        </div>
+        <div className="aboutme">
+          {/* <strong> */}
+          Embark on the journey through my diverse portfolio, showcasing years of experience in transforming ideas into captivating visuals.
+          {/* </strong> */}
         </div>
       </div>
-      <div className="aboutme">
-        <strong>
-          Lorem ipsum dolor <strong style={{color:"#eb5939"}}>sit amet consectetur </strong>adipisicing elit. Aperiam
-          tempora molestias aspernatur sed blanditiis 
-          
-        </strong>
-      </div>
-    </div>
     </div>
   );
 };

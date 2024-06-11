@@ -7,6 +7,7 @@ import {
   LinkedInIcon,
 } from "./SocialIcons";
 import audioSrc from '../assets/sound.mp3';
+import logo from '../assets/7Tf.gif';
 import 'animate.css';
 
 
@@ -41,10 +42,20 @@ const Sidebar = () => {
     setIsSoundOn(!isSoundOn);
   };
 
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      window.scrollTo({
+        top: element.offsetTop,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <div className="sidebar_container">
       <div className="sidebar">
-        <div className="logo">Logo</div>
+        <div className="logo"><img src={logo} alt="" /></div>
         <div className="contact">
           <div
             className="icon"
@@ -55,7 +66,7 @@ const Sidebar = () => {
               transition: "transform 0.2s ease",
             }}
           >
-            <a href="https://dribbble.com/phamduyminh">
+            <a href="*">
               <DribbbleIcon />
             </a>
           </div>
@@ -68,7 +79,7 @@ const Sidebar = () => {
               transition: "transform 0.2s ease",
             }}
           >
-            <a href="https://www.instagram.com/minhpham.design">
+            <a href="*">
               <InstagramIcon />
             </a>
           </div>
@@ -81,7 +92,7 @@ const Sidebar = () => {
               transition: "transform 0.2s ease",
             }}
           >
-            <a href="https://www.youtube.com/@MinhPhamDesign">
+            <a href="*">
               <YouTubeIcon />
             </a>
           </div>
@@ -94,7 +105,7 @@ const Sidebar = () => {
               transition: "transform 0.2s ease",
             }}
           >
-            <a href="https://www.linkedin.com/in/minh-pham-9b67ba52/">
+            <a href="*">
               <LinkedInIcon />
             </a>
           </div>
@@ -103,9 +114,9 @@ const Sidebar = () => {
 
       <div className="sidebar">
         <div className="info">
-          <div>About</div>
-          <div>Work</div>
-          <div>Contact</div>
+          <div><a href="#aboutme" onClick={() => scrollToSection('aboutme')} style={{textDecoration:"none", color:"#b7ab98"}}>About</a></div>
+          <div><a href="#work" onClick={() => scrollToSection('work')} style={{textDecoration:"none", color:"#b7ab98"}}>Work</a></div>
+          <div><a href="#contact" onClick={() => scrollToSection('contact')} style={{textDecoration:"none", color:"#b7ab98"}}>Contact</a></div>
         </div>
         <div className="audio">
         <audio ref={audioRef} autoPlay loop playsInline style={{ display: 'none' }}>
